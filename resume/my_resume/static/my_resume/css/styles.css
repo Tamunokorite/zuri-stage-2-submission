@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Style+Script&display=swap');
+
+body {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.intro img {
+    border-radius: 50%;
+}
+
+.header-styled {
+    font-family: 'Style Script', cursive !important;
+}
+
+#resume {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#contactme {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contactme form {
+    width: 80%;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#message {
+    resize: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+}

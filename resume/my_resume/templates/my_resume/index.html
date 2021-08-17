@@ -1,0 +1,176 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous"
+    >
+    <link 
+        rel="stylesheet" 
+        href="{% static 'my_resume/css/styles.css' %}"
+    >
+    <title>Tamunokorite Briggs | Resume</title>
+</head>
+<body class="bg-light text-dark">
+    <main class="container-fluid">
+        <div class="px-4 py-5 my-5 text-center intro">
+            <img 
+                class="d-block mx-auto mb-4" 
+                src="https://ca.slack-edge.com/T01L862FMT3-U02B0B87A1G-c6e408292db9-512" 
+                alt="My Image" 
+                width="300" 
+                height="300"
+            >
+            <h1 class="display-5 fw-bold header-styled">Tamunokorite Briggs</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4">
+                  I am an aspiring fullstack web developer with entry level experience
+                  building web applications with Django, PHP, HTML, CSS, and JavaScript.
+              </p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a class="btn btn-primary btn-lg px-4 gap-3" href="#resume">Resume</a>
+                <a class="btn btn-outline-secondary btn-lg px-4" href="#contactme">Contact Me</a>
+              </div>
+            </div>
+        </div>
+        <div class="px-4 py-5 my-5 bg-dark text-white" id="resume">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <h2 class="h1 text-uppercase">Work Experience</h2>
+                    <ul class="list-styled">
+                        <li>
+                            <h3 class="h4">Student Intern</h3>
+                            <p class="small">
+                                Access Solutions Ltd. <br />
+                                <span class="text-muted">2019</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="h1 text-uppercase">Skills</h2>
+                    <ul class="list-styled">
+                        <li>Python (Django)</li>
+                        <li>JavaScript (React)</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                        <li>System Design</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <h2 class="h1 text-uppercase">Education</h2>
+                    <ul class="list-styled">
+                        <li>
+                            <h3 class="h4">University</h3>
+                            <p class="small">
+                                Nile University of Nigeria <br />
+                                <span class="text-muted">2019-present</span>
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="h4">Secondary School</h3>
+                            <p class="small">
+                                Princess Adeja International College <br />
+                                <span class="text-muted">2015-2019</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="h1 text-uppercase">Personal Projects</h2>
+                    <ul class="list-styled">
+                        <li><a href="https://github.com/Tamunokorite/php-cbt" class="text-white">Computer Based Test Portal in PHP</a></li>
+                        <li><a href="https://github.com/Tamunokorite/django3-todowoo-project" class="text-white">Todo App in Django</a></li>
+                        <li><a href="https://enigmatic-gorge-98470.herokuapp.com/" class="text-white">E-Hostel Management System in PHP</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="offset-md-6"></div>
+                <div class="col-md-6">
+                    <h2 class="h1 text-uppercase">Certificates</h2>
+                    <ul class="list-styled">
+                        <li>
+                            <p>
+                                Nile University of Nigeria Google Developer Students Club Solution Challenge 
+                                Hackathon winner<span class="small text-muted"> - 2021</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                West African Secondary School Certification Exam (WASSCE)<span class="small text-muted"> - 2019</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                National Examinations Council(NECO) Senior Secondary School Certificate Examination (SSCE)
+                                <span class="small text-muted"> - 2019</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="offset-md-6"></div>
+                <div class="col-md-6">
+                    <h2 class="h1 text-uppercase">Interests</h2>
+                    <ul class="list-styled">
+                        <li>Web Development</li>
+                        <li>Machine Learning</li>
+                        <li>Startup Development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="px-4 py-5 my-5" id="contactme">
+            <h2 class="text-center h1 header-styled">Contact Me</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" maxlength="100">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" name="email" aria-describedby="email" maxlength="150">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="name" name="title" maxlength="100">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="8" maxlength="2000"></textarea>
+                  </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+              </form>
+        </div>
+    </main>
+
+    {% if success %}
+    <script>
+        alert("{{success}}");
+    </script>
+    {% endif %}
+
+    <script 
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" 
+        crossorigin="anonymous"
+    >
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" 
+        crossorigin="anonymous"
+    >
+    </script>
+</body>
+</html>
